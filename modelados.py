@@ -5,6 +5,8 @@ print("modelado de datos")
 
 def radar_atomico(distancia_misil:float, umbral:float, misiles_detectados = False):
     
+    """ Esta funcion es un radar para detectar misiles"""
+    
     if misiles_detectados:
         
         if distancia_misil < umbral:
@@ -16,3 +18,7 @@ def radar_atomico(distancia_misil:float, umbral:float, misiles_detectados = Fals
             
     else:
         print("no se detecta misil")
+        
+    return None if misiles_detectados == False else print(f"la distancia del misil es {distancia_misil}")
+        
+        
