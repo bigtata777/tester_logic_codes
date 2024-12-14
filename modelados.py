@@ -19,6 +19,16 @@ def radar_atomico(distancia_misil:float, umbral:float, misiles_detectados = Fals
     else:
         print("no se detecta misil")
         
-    return None if misiles_detectados == False else print(f"la distancia del misil es {distancia_misil}")
+
+    return print("distancia misil", distancia_misil)
         
+
         
+
+if __name__ == "__main__":
+    distancia = 10
+    umbral  = 12
+    detectados = True
+    print(radar_atomico(distancia,umbral,detectados))
+    
+    
