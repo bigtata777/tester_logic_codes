@@ -6,11 +6,14 @@ import re
 
 
 
-def radar_atomico(distancia_misil:float, umbral:float, misiles_detectados = False):
+def radar_atomico(distancia_misil:float, umbral:float, angulo:float, misiles_detectados = False):
     
     """ Esta funcion es un radar para detectar misiles"""
+    factor_aleatorio = np.cos(angulo)
     
     if misiles_detectados:
+        
+        distancia_misil = np.sqrt(distancia_misil + factor_aleatorio)
         
         if distancia_misil < umbral:
             
@@ -31,7 +34,8 @@ def radar_atomico(distancia_misil:float, umbral:float, misiles_detectados = Fals
 if __name__ == "__main__":
     distancia = 10
     umbral  = 12
+    angulo = 0.98
     detectados = True
-    print(radar_atomico(distancia,umbral,detectados))
+    print(radar_atomico(distancia,umbral,angulo=angulo ,misiles_detectados = detectados))
     
     
