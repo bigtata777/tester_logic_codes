@@ -4,12 +4,14 @@ import pandas as pd
 import re
 
 
-
-
-def radar_atomico(distancia_misil:float, umbral:float, angulo:float, misiles_detectados = False):
+def radar_atomico(distancia_misil:float, 
+                  umbral:float, 
+                  angulo:float,
+                  localizacion:tuple,
+                  misiles_detectados = False):
     
     """ Esta funcion es un radar para detectar misiles"""
-    factor_aleatorio = np.cos(angulo)
+    factor_aleatorio = np.cos(angulo) + np.exp(-angulo)
     
     if misiles_detectados:
         
