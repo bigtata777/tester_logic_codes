@@ -50,7 +50,7 @@ if __name__ == "__main__":
     distancia = 10
     umbral  = 12
     angulo = 0.98
-    localizacion = (12.3,11.5)
+    localizacion = (11.3,31.5)
     detectados = True
     print(radar_atomico(distancia,umbral,angulo=angulo, 
                         localizacion = localizacion ,
