@@ -26,6 +26,10 @@ def radar_atomico(distancia_misil:float,
         
         distancia_riesgo = (distancia_misil - ( 5 + 10*umbral))
         
+        probabilidad_de_riesgo = (1/(1+np.exp(-umbral)))
+        
+        distancia_riesgo = probabilidad_de_riesgo*probabilidad_de_riesgo
+        
         if distancia_misil < 5 + 10*umbral:
             
             print("misil esta cerca de la base, evacuar")
