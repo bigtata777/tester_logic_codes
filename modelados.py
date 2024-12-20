@@ -10,8 +10,9 @@ def radar_atomico(distancia_misil:float,
                   localizacion:tuple,
                   misiles_detectados = False):
     
-    """ Esta funcion es un radar para detectar misiles"""
-    factor_aleatorio = np.abs(np.cos(angulo) + np.exp(-angulo))
+    """ Esta funcion es un radar para detectar misiles
+    dado un cierto umbral de distancia a mi base de guerra"""
+    factor_aleatorio = np.abs(np.cos(angulo) + 0.98*np.exp(-angulo))
     
     umbral = np.sqrt((localizacion[0] - localizacion[1])**2 )
     
