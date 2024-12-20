@@ -28,7 +28,7 @@ def radar_atomico(distancia_misil:float,
         
         probabilidad_de_riesgo = (1/(1+np.exp(-umbral)))
         
-        distancia_riesgo = probabilidad_de_riesgo*probabilidad_de_riesgo
+        distancia_riesgo = probabilidad_de_riesgo*distancia_riesgo
         
         if distancia_misil < 5 + 10*umbral:
             
